@@ -1,0 +1,1722 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+>
+  <head>
+    <title>智能云课堂 - Powered By 杭州佳学</title>
+    <meta charset="UTF-8" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no,email=no" />
+    <meta name="applicable-device" content="pc" />
+    <meta name="keywords"  content="佳学堂,智能云课堂,翻转课堂,课程诊改,内部质量保障,教学质量保障" />
+    <meta name="description" />
+    
+    <link
+      id="site-icon"
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="http://dmbch14buork.pub.jiastudy.net/2021/05/25/56c85c2b-351e-473d-b6bf-8449f7e11ff6.png~common"
+    />
+    <link
+      href="//cdn.jiastudy.cn/static-dist/style/app-cea12c1515612fa3914f859d9de14018.css?version=3.7.0"
+      rel="stylesheet"
+    />
+    <div>
+    <link
+            href="//cdn.jiastudy.cn/static-dist/style/home-ae8296a685c66a8372daeefb9e092f6a.css?version=3.7.0"
+      rel="stylesheet"
+    />
+  </div>
+    <script
+      src="//cdn.jiastudy.cn/static-dist/libs/jquery.min-b61aa6e2d68d21b3546b5b418bf0e9c3.js?version=3.7.0"
+    ></script>
+    <script
+      src="//cdn.jiastudy.cn/static-dist/js/base-8090424b3bf4ccfdcef28fbc41e847c4.js?version=3.7.0"
+    ></script>
+    <script
+      src="//cdn.jiastudy.cn/static-dist/libs/jquery.raty-8c36a695bd666542fb29adc826eb2bbb.js?version=3.7.0"
+    ></script>
+    <div></div>
+    <style>
+      .browser-error-tip {
+        display: block !important;
+      }
+
+      #browser-error-tip {
+        position: fixed;
+        z-index: 1000000000000000000;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        padding: 10px;
+        background: #ffffff;
+        right: 0;
+        display: none;
+        color: #454545;
+      }
+
+      #browser-error-tip-content {
+        position: relative;
+        width: 960px;
+        margin: 20px auto;
+      }
+    </style>
+    <style type="text/css">
+      .browser-error-tip a {
+        text-decoration: none;
+        color: #0072c6;
+      }
+
+      a:hover {
+        text-decoration: none;
+        color: #004d8c;
+      }
+
+      .browser-error-tip h1 {
+        font-size: 40px;
+        line-height: 80px;
+        font-weight: bolder;
+        margin-bottom: 10px;
+      }
+
+      .browser-error-tip h2 {
+        font-size: 20px;
+        line-height: 25px;
+        font-weight: bolder;
+        margin: 10px 0;
+      }
+
+      .browser-error-tip em {
+        color: red;
+      }
+
+      .browser-error-tip p {
+        margin-bottom: 10px;
+      }
+
+      .browser-error-tip hr {
+        margin: 20px 0;
+        border: 0;
+        border-top: 1px solid #333;
+      }
+
+      .browser-error-tip .browser img {
+        width: 34px;
+        height: 34px;
+        border: 0;
+        float: left;
+        margin-right: 10px;
+      }
+
+      .browser-error-tip span {
+        display: block;
+        font-size: 12px;
+        line-height: 12px;
+      }
+
+      .browser-error-tip .clean {
+        clear: both;
+      }
+
+      .browser-error-tip .browser {
+        padding: 10px 0;
+      }
+
+      .browser-error-tip .browser li {
+        height: 40px;
+        line-height: 22px;
+        float: left;
+        list-style: none;
+        padding-left: 40px;
+        background-size: 40px 40px;
+        background-repeat: no-repeat;
+        margin-right: 10px;
+      }
+
+      .browser-error-tip .browser li a {
+        line-height: 40px;
+        padding-left: 1em;
+      }
+
+      .browser-error-tip .browser .firefox {
+        background-image: url("<%= BASE_URL %>firefox.png");
+      }
+
+      .browser-error-tip .browser .chrome {
+        background-image: url("<%= BASE_URL %>chrome.png");
+      }
+
+      .browser-error-tip .browser .qq {
+        background-image: url("/images/browsers/qq.png");
+      }
+
+      .browser-error-tip .browser .360 {
+        background-image: url(/images/browsers/360.png);
+      }
+
+      .browser-error-tip .browser .maxthon {
+        background-image: url(/images/browsers/maxthon.png);
+      }
+
+      .browser-error-tip .browser .uc {
+        background-image: url(/images/browsers/uc.png);
+      }
+
+      .browser-error-tip .small-alert {
+        font-size: 12px;
+        margin: 15px 0 8px;
+        color: #90949c;
+      }
+
+      .browser-error-tip .small-alert:not(.hide) + hr {
+        margin-top: 0;
+      }
+
+      .browser-error-tip .hide {
+        display: none;
+      }
+
+      .browser-error-tip .change {
+        width: 100%;
+        height: auto;
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+    <div class="home-page-wrap">
+    <div
+      class="home-page-tab"
+    >
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">
+            <img
+              src="http://dmbch14buork.pub.jiastudy.net/2021/05/25/ef274916-7ea3-4e8e-b4c9-e764384518ad.png~common"
+              alt=""
+            />
+            <!-- <img
+              id="logo"
+              th:src="@{/static-dist/images/logo.png}"
+              src="/static/static-dist/images/logo.png"
+            /> -->
+            <span
+            >智能云课堂</span>
+          </a>
+          <span class="header-space-line">|</span>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li id="home-nav"><a href="/" >首页</a></li>
+            <li id="all-course"><a href="/explore/courses">全部课程</a></li>
+            
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <form class="navbar-form navbar-left" action="/explore/courses">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control search-form-control"
+                    placeholder="请输入你要查找的内容"
+                    name="keywords"
+                    value=""
+                  />
+                  <button type="submit" class="search-form-icon">
+                    <i class="glyphicon glyphicon-search"></i>
+                  </button>
+                </div>
+              </form>
+              <span class="header-space-line">|</span>
+            </li>
+            <li id="is-login">
+              <a href="/login">登录</a>
+            </li>
+            
+            
+
+           
+            
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- <nav
+      class="navbar navbar-default home-layout-navbar"
+      id="home-layout-navbar"
+    >
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">
+            <img
+              th:src="@{/static-dist/images/logo.png}"
+              src="/static/static-dist/images/logo.png"
+            />北京佳学在线教育科技有限公司 <span class="title"> 首页</span>
+          </a>
+        </div>
+        <div
+          class="collapse navbar-collapse"
+          id="bs-example-navbar-collapse-1"
+        ></div>
+        <div
+          class="collapse navbar-collapse"
+          id="bs-example-navbar-collapse-1"
+        ></div>
+      </div>
+    </nav> -->
+  </div>
+
+    <div class="home-page">
+      <!-- banner 区域-->
+
+<!--      <url:include url="`/index/show_block`" th:if="${modules.component == 'show_block'}"/>-->
+<!--      <div th:include="'/index/'+ ${modules.component}" ></div>-->
+      <div  class="home-item">
+<div>
+  <!-- banner 区域-->
+  
+<div
+  id="carousel-home-banner"
+  class="carousel slide carousel-banner"
+  data-ride="carousel"
+>
+  
+  <div
+    class="carousel-inner"
+    role="listbox"
+  >
+    <div  class="item active" >
+      <a herf="/" target="_blank">
+      <img src="//tfznrarievqmpxwu.jiastudy.net/default-banner.png" alt="..." class="js-banner-item" data-url="/"  />
+      </a>
+    </div>
+  </div>
+  <!--   <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img
+        th:src="@{/static-dist/images/banner1.jpg}"
+        src="/static/static-dist/images/banner1.jpg"
+        alt="..."
+      />
+    </div>
+    <div class="item">
+      <img
+        th:src="@{/static-dist/images/banner1.jpg}"
+        src="/static/static-dist/images/banner1.jpg"
+        alt="..."
+      />
+    </div>
+  </div> -->
+<!--
+   <a
+          class="left carousel-control"
+          href="#carousel-home-banner"
+          role="button"
+          data-slide="prev"
+        >
+          <span
+            class="glyphicon glyphicon-chevron-left"
+            aria-hidden="true"
+          ></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="right carousel-control"
+          href="#carousel-home-banner"
+          role="button"
+          data-slide="next"
+        >
+          <span
+            class="glyphicon glyphicon-chevron-right"
+            aria-hidden="true"
+          ></span>
+          <span class="sr-only">Next</span>
+        </a>-->
+</div>
+
+</div>
+  <!-- 展示模块 区域-->
+      
+  <!-- 推荐好课 -->
+      
+  <!-- 热门课程 -->
+      
+  <!-- 最新好课 -->
+      
+  <!-- 推荐教师 -->
+      
+      </div>
+      <div  class="home-item">
+
+  <!-- 展示模块 区域-->
+      <div>
+  <div class="container">
+  <div class="section-tile">
+    <div class="splice-box">
+      <div class="splice-line"></div>
+      <div class="splice-squ" ></div>
+      <div class="splice-mini-squ" ></div>
+    </div>
+
+    <span class="title"
+      >展示模块</span
+    >
+    <div class="splice-box right">
+      <div class="splice-line"></div>
+      <div class="splice-squ" ></div>
+      <div class="splice-mini-squ" ></div>
+    </div>
+  </div>
+  <div class="row">
+    <div>
+    
+    
+    
+    
+  </div>
+    <div>
+    
+    
+    
+    
+  </div>
+    <div>
+    <div class="col-md-3">
+      <a class="q-card" href="#recommend-course" >
+        <div class="q-card-box">
+          <i class="iconfont iconweibiaoti-1_huaban1"></i>
+          <p>推荐好课</p>
+        </div>
+      </a>
+    </div>
+    
+    
+    
+  </div>
+    <div>
+    
+    <div class="col-md-3">
+      <a class="q-card" href="#hot-course" >
+        <div class="q-card-box">
+        <i class="iconfont iconweibiaoti-1_huaban1fuben3" ></i>
+        <p>最热课程</p>
+        </div>
+      </a>
+    </div>
+    
+    
+  </div>
+    <div>
+    
+    
+    <div class="col-md-3" href="#new-course">
+      <a class="q-card" >
+        <div class="q-card-box">
+        <i class="iconfont iconweibiaoti-1_huaban1fuben2" ></i>
+        <p>最新好课</p>
+        </div>
+      </a>
+    </div>
+    
+  </div>
+    <div>
+    
+    
+    
+    <div class="col-md-3">
+      <a class="q-card" href="#recommend-teacher" >
+        <div class="q-card-box">
+        <i class="iconfont iconweibiaoti-1_huaban1fuben" ></i>
+        <p>推荐教师</p>
+        </div>
+      </a>
+    </div>
+  </div>
+  </div>
+</div>
+
+</div>
+  <!-- 推荐好课 -->
+      
+  <!-- 热门课程 -->
+      
+  <!-- 最新好课 -->
+      
+  <!-- 推荐教师 -->
+      
+      </div>
+      <div  class="home-item">
+
+  <!-- 展示模块 区域-->
+      
+  <!-- 推荐好课 -->
+      <div>
+  <section>
+  <div class="container">
+    <div class="section-tile" id="recommend-course">
+      <div class="splice-box">
+        <div class="splice-line"></div>
+        <div class="splice-squ" ></div>
+        <div class="splice-mini-squ" ></div>
+      </div>
+      <span class="title"
+        >推荐好课</span
+      >
+      <div class="splice-box right">
+        <div class="splice-line"></div>
+        <div class="splice-squ" ></div>
+        <div class="splice-mini-squ" ></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3">
+        <a
+          class="thumbnail thumbnail-course"
+          href="/explore/courses/1397346215849230337"
+        >
+          <div class="img-content">
+              <img class="js-img"
+                   data-img="http://dmbch14buork.pub.jiastudy.net/2021/05/26/f809abb0-932d-43a8-97df-87ea54c50806.png~common"
+                   src="http://dmbch14buork.pub.jiastudy.net/2021/05/26/f809abb0-932d-43a8-97df-87ea54c50806.png~common"  />
+          </div>
+          <div class="caption">
+            <p class="title ellipsis">2021教学大赛相关资料</p>
+            <p>
+              <img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              />
+              
+
+              
+
+              <span class="item-score">5.0</span>
+              <span class="fr item-num">
+                人数： <span>395</span>
+              </span>
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a
+          class="thumbnail thumbnail-course"
+          href="/explore/courses/1336225731301928961"
+        >
+          <div class="img-content">
+              <img class="js-img"
+                   data-img="//dmbch14buork.pub.jiastudy.net/2020/12/08/3ca26dc7-dc35-47b8-8452-6d167640083f.jpg~common"
+                   src="//dmbch14buork.pub.jiastudy.net/2020/12/08/3ca26dc7-dc35-47b8-8452-6d167640083f.jpg~common"  />
+          </div>
+          <div class="caption">
+            <p class="title ellipsis">教师发展培训课程</p>
+            <p>
+              <img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              />
+              
+
+              
+
+              <span class="item-score">5.0</span>
+              <span class="fr item-num">
+                人数： <span>798</span>
+              </span>
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a
+          class="thumbnail thumbnail-course"
+          href="/explore/courses/1302796101623140354"
+        >
+          <div class="img-content">
+              <img class="js-img"
+                   data-img="//dmbch14buork.pub.jiastudy.net/2020/09/16/35fcff5d-35bb-4910-a68f-cf94b1bf9e97.jpg~common"
+                   src="//dmbch14buork.pub.jiastudy.net/2020/09/16/35fcff5d-35bb-4910-a68f-cf94b1bf9e97.jpg~common"  />
+          </div>
+          <div class="caption">
+            <p class="title ellipsis">如何使用智能云课堂</p>
+            <p>
+              <img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              />
+              
+
+              
+
+              <span class="item-score">5.0</span>
+              <span class="fr item-num">
+                人数： <span>855</span>
+              </span>
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a
+          class="thumbnail thumbnail-course"
+          href="/explore/courses/1336481460307329025"
+        >
+          <div class="img-content">
+              <img class="js-img"
+                   data-img="//dmbch14buork.pub.jiastudy.net/2020/12/09/cb9a9ac9-3761-4a07-b005-156fbb7f02ef.jpg~common"
+                   src="//dmbch14buork.pub.jiastudy.net/2020/12/09/cb9a9ac9-3761-4a07-b005-156fbb7f02ef.jpg~common"  />
+          </div>
+          <div class="caption">
+            <p class="title ellipsis">多媒体教室使用指南</p>
+            <p>
+              <img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              />
+              
+
+              
+
+              <span class="item-score">5.0</span>
+              <span class="fr item-num">
+                人数： <span>138</span>
+              </span>
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <a href="/explore/courses?sort=-seq,desc&sort=recommend_time,desc">
+        <button class="btn btn-default more-btn">
+          更多推荐课程
+        </button>
+      </a>
+    </div>
+  </div>
+</section>
+
+      </div>
+  <!-- 热门课程 -->
+      
+  <!-- 最新好课 -->
+      
+  <!-- 推荐教师 -->
+      
+      </div>
+      <div  class="home-item">
+
+  <!-- 展示模块 区域-->
+      
+  <!-- 推荐好课 -->
+      
+  <!-- 热门课程 -->
+      <idv>
+  <section class="bg-fb">
+  <div class="container">
+    <div class="section-tile" id="hot-course">
+      <div class="splice-box">
+        <div class="splice-line"></div>
+        <div class="splice-squ" ></div>
+        <div class="splice-mini-squ" ></div>
+      </div>
+      <span class="title"
+        >最热课程</span
+      >
+      <div class="splice-box right">
+      <div class="splice-line"></div>
+      <div class="splice-squ" ></div>
+      <div class="splice-mini-squ" ></div>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <a
+          class="thumbnail thumbnail-course"
+          href="/explore/courses/1302796101623140354"
+        >
+          <div class="img-content">
+            <img
+                    class="js-img"
+                    data-img="//dmbch14buork.pub.jiastudy.net/2020/09/16/35fcff5d-35bb-4910-a68f-cf94b1bf9e97.jpg~common"
+              src="//dmbch14buork.pub.jiastudy.net/2020/09/16/35fcff5d-35bb-4910-a68f-cf94b1bf9e97.jpg~common"
+            />
+          </div>
+          <div class="caption">
+            <p class="title ellipsis">如何使用智能云课堂</p>
+            <p>
+              <img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              />
+              
+              
+              <span class="item-score">5.0</span>
+              <span class="fr item-num">
+                人数： <span>855</span>
+              </span>
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a
+          class="thumbnail thumbnail-course"
+          href="/explore/courses/1336225731301928961"
+        >
+          <div class="img-content">
+            <img
+                    class="js-img"
+                    data-img="//dmbch14buork.pub.jiastudy.net/2020/12/08/3ca26dc7-dc35-47b8-8452-6d167640083f.jpg~common"
+              src="//dmbch14buork.pub.jiastudy.net/2020/12/08/3ca26dc7-dc35-47b8-8452-6d167640083f.jpg~common"
+            />
+          </div>
+          <div class="caption">
+            <p class="title ellipsis">教师发展培训课程</p>
+            <p>
+              <img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              />
+              
+              
+              <span class="item-score">5.0</span>
+              <span class="fr item-num">
+                人数： <span>798</span>
+              </span>
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a
+          class="thumbnail thumbnail-course"
+          href="/explore/courses/1302487999352565762"
+        >
+          <div class="img-content">
+            <img
+                    class="js-img"
+                    data-img="//dmbch14buork.pub.jiastudy.net/2020/09/07/6739f235-6165-43bb-88a6-3e24c99d7847.jpg~common"
+              src="//dmbch14buork.pub.jiastudy.net/2020/09/07/6739f235-6165-43bb-88a6-3e24c99d7847.jpg~common"
+            />
+          </div>
+          <div class="caption">
+            <p class="title ellipsis">大学语文 Ⅱ</p>
+            <p>
+              <img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              />
+              
+              
+              <span class="item-score">5.0</span>
+              <span class="fr item-num">
+                人数： <span>710</span>
+              </span>
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a
+          class="thumbnail thumbnail-course"
+          href="/explore/courses/1302488014548529154"
+        >
+          <div class="img-content">
+            <img
+                    class="js-img"
+                    src="/static-dist/images/course-default.png"
+            />
+          </div>
+          <div class="caption">
+            <p class="title ellipsis">高等数学</p>
+            <p>
+              <img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              />
+              
+              
+              <span class="item-score">5.0</span>
+              <span class="fr item-num">
+                人数： <span>660</span>
+              </span>
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a
+          class="thumbnail thumbnail-course"
+          href="/explore/courses/1397346215849230337"
+        >
+          <div class="img-content">
+            <img
+                    class="js-img"
+                    data-img="http://dmbch14buork.pub.jiastudy.net/2021/05/26/f809abb0-932d-43a8-97df-87ea54c50806.png~common"
+              src="http://dmbch14buork.pub.jiastudy.net/2021/05/26/f809abb0-932d-43a8-97df-87ea54c50806.png~common"
+            />
+          </div>
+          <div class="caption">
+            <p class="title ellipsis">2021教学大赛相关资料</p>
+            <p>
+              <img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              />
+              
+              
+              <span class="item-score">5.0</span>
+              <span class="fr item-num">
+                人数： <span>395</span>
+              </span>
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a
+          class="thumbnail thumbnail-course"
+          href="/explore/courses/1302487955341733889"
+        >
+          <div class="img-content">
+            <img
+                    class="js-img"
+                    src="/static-dist/images/course-default.png"
+            />
+          </div>
+          <div class="caption">
+            <p class="title ellipsis">基础2</p>
+            <p>
+              <img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              />
+              
+              
+              <span class="item-score">5.0</span>
+              <span class="fr item-num">
+                人数： <span>265</span>
+              </span>
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a
+          class="thumbnail thumbnail-course"
+          href="/explore/courses/1302488026879782914"
+        >
+          <div class="img-content">
+            <img
+                    class="js-img"
+                    src="/static-dist/images/course-default.png"
+            />
+          </div>
+          <div class="caption">
+            <p class="title ellipsis">高等数学Ⅱ</p>
+            <p>
+              
+              
+              <img
+                src="/static-dist/libs/img/star-off.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-off.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-off.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-off.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-off.png"
+                alt="..."
+              />
+              <span class="item-score">0.0</span>
+              <span class="fr item-num">
+                人数： <span>238</span>
+              </span>
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a
+          class="thumbnail thumbnail-course"
+          href="/explore/courses/1302488034089791490"
+        >
+          <div class="img-content">
+            <img
+                    class="js-img"
+                    data-img="//dmbch14buork.pub.jiastudy.net/2020/09/07/ca79a6bf-8813-4f8b-b489-21b76c90e8a0.jpg~common"
+              src="//dmbch14buork.pub.jiastudy.net/2020/09/07/ca79a6bf-8813-4f8b-b489-21b76c90e8a0.jpg~common"
+            />
+          </div>
+          <div class="caption">
+            <p class="title ellipsis">单片机应用产品设计与制作</p>
+            <p>
+              <img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              />
+              
+              
+              <span class="item-score">5.0</span>
+              <span class="fr item-num">
+                人数： <span>215</span>
+              </span>
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="text-center">
+      <a href="/explore/courses?sort=student_num,desc">
+        <button class="btn btn-default more-btn">更多热门课程</button>
+      </a>
+    </div>
+  </div>
+</section>
+
+      </idv>
+  <!-- 最新好课 -->
+      
+  <!-- 推荐教师 -->
+      
+      </div>
+      <div  class="home-item">
+
+  <!-- 展示模块 区域-->
+      
+  <!-- 推荐好课 -->
+      
+  <!-- 热门课程 -->
+      
+  <!-- 最新好课 -->
+      <div>
+  <section>
+  <div class="container">
+    <div class="section-tile" id="new-course">
+      <div class="splice-box">
+        <div class="splice-line"></div>
+        <div class="splice-squ" ></div>
+        <div class="splice-mini-squ" ></div>
+      </div>
+      <span class="title"
+        >最新好课</span
+      >
+      <div class="splice-box right">
+        <div class="splice-line"></div>
+        <div class="splice-squ" ></div>
+        <div class="splice-mini-squ" ></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <a
+          class="thumbnail thumbnail-course"
+          href="/explore/courses/1323438292688834562"
+        >
+          <div class="img-content">
+            <img
+                    class="js-img"
+                    data-img="//dmbch14buork.pub.jiastudy.net/2022/04/19/7c59c750-cb1f-40cb-9aa2-d08a797fca6d.jpg~common"
+              src="//dmbch14buork.pub.jiastudy.net/2022/04/19/7c59c750-cb1f-40cb-9aa2-d08a797fca6d.jpg~common"
+            />
+          </div>
+          <div class="caption">
+            <p class="title ellipsis">2022.4构力杯BIM大赛</p>
+            <p>
+              
+              
+              <img
+                src="/static-dist/libs/img/star-off.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-off.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-off.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-off.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-off.png"
+                alt="..."
+              />
+              <span class="item-score">0.0</span>
+              <span class="fr item-num">
+                人数： <span>19</span>
+              </span>
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a
+          class="thumbnail thumbnail-course"
+          href="/explore/courses/1435163069050109953"
+        >
+          <div class="img-content">
+            <img
+                    class="js-img"
+                    src="/static-dist/images/course-default.png"
+            />
+          </div>
+          <div class="caption">
+            <p class="title ellipsis">隧道工程施工技术</p>
+            <p>
+              
+              
+              <img
+                src="/static-dist/libs/img/star-off.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-off.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-off.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-off.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-off.png"
+                alt="..."
+              />
+              <span class="item-score">0.0</span>
+              <span class="fr item-num">
+                人数： <span>19</span>
+              </span>
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a
+          class="thumbnail thumbnail-course"
+          href="/explore/courses/1397346215849230337"
+        >
+          <div class="img-content">
+            <img
+                    class="js-img"
+                    data-img="http://dmbch14buork.pub.jiastudy.net/2021/05/26/f809abb0-932d-43a8-97df-87ea54c50806.png~common"
+              src="http://dmbch14buork.pub.jiastudy.net/2021/05/26/f809abb0-932d-43a8-97df-87ea54c50806.png~common"
+            />
+          </div>
+          <div class="caption">
+            <p class="title ellipsis">2021教学大赛相关资料</p>
+            <p>
+              <img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              />
+              
+              
+              <span class="item-score">5.0</span>
+              <span class="fr item-num">
+                人数： <span>395</span>
+              </span>
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a
+          class="thumbnail thumbnail-course"
+          href="/explore/courses/1336481460307329025"
+        >
+          <div class="img-content">
+            <img
+                    class="js-img"
+                    data-img="//dmbch14buork.pub.jiastudy.net/2020/12/09/cb9a9ac9-3761-4a07-b005-156fbb7f02ef.jpg~common"
+              src="//dmbch14buork.pub.jiastudy.net/2020/12/09/cb9a9ac9-3761-4a07-b005-156fbb7f02ef.jpg~common"
+            />
+          </div>
+          <div class="caption">
+            <p class="title ellipsis">多媒体教室使用指南</p>
+            <p>
+              <img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              />
+              
+              
+              <span class="item-score">5.0</span>
+              <span class="fr item-num">
+                人数： <span>138</span>
+              </span>
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a
+          class="thumbnail thumbnail-course"
+          href="/explore/courses/1336225731301928961"
+        >
+          <div class="img-content">
+            <img
+                    class="js-img"
+                    data-img="//dmbch14buork.pub.jiastudy.net/2020/12/08/3ca26dc7-dc35-47b8-8452-6d167640083f.jpg~common"
+              src="//dmbch14buork.pub.jiastudy.net/2020/12/08/3ca26dc7-dc35-47b8-8452-6d167640083f.jpg~common"
+            />
+          </div>
+          <div class="caption">
+            <p class="title ellipsis">教师发展培训课程</p>
+            <p>
+              <img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              />
+              
+              
+              <span class="item-score">5.0</span>
+              <span class="fr item-num">
+                人数： <span>798</span>
+              </span>
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a
+          class="thumbnail thumbnail-course"
+          href="/explore/courses/1302796101623140354"
+        >
+          <div class="img-content">
+            <img
+                    class="js-img"
+                    data-img="//dmbch14buork.pub.jiastudy.net/2020/09/16/35fcff5d-35bb-4910-a68f-cf94b1bf9e97.jpg~common"
+              src="//dmbch14buork.pub.jiastudy.net/2020/09/16/35fcff5d-35bb-4910-a68f-cf94b1bf9e97.jpg~common"
+            />
+          </div>
+          <div class="caption">
+            <p class="title ellipsis">如何使用智能云课堂</p>
+            <p>
+              <img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              />
+              
+              
+              <span class="item-score">5.0</span>
+              <span class="fr item-num">
+                人数： <span>855</span>
+              </span>
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a
+          class="thumbnail thumbnail-course"
+          href="/explore/courses/1302487973213663234"
+        >
+          <div class="img-content">
+            <img
+                    class="js-img"
+                    data-img="//dmbch14buork.pub.jiastudy.net/2020/09/07/3bec518a-42b4-408d-84c3-d1efe9ed3369.jpg~common"
+              src="//dmbch14buork.pub.jiastudy.net/2020/09/07/3bec518a-42b4-408d-84c3-d1efe9ed3369.jpg~common"
+            />
+          </div>
+          <div class="caption">
+            <p class="title ellipsis">题图诗鉴赏与写作技巧</p>
+            <p>
+              <img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              />
+              
+              
+              <span class="item-score">5.0</span>
+              <span class="fr item-num">
+                人数： <span>200</span>
+              </span>
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a
+          class="thumbnail thumbnail-course"
+          href="/explore/courses/1302487999352565762"
+        >
+          <div class="img-content">
+            <img
+                    class="js-img"
+                    data-img="//dmbch14buork.pub.jiastudy.net/2020/09/07/6739f235-6165-43bb-88a6-3e24c99d7847.jpg~common"
+              src="//dmbch14buork.pub.jiastudy.net/2020/09/07/6739f235-6165-43bb-88a6-3e24c99d7847.jpg~common"
+            />
+          </div>
+          <div class="caption">
+            <p class="title ellipsis">大学语文 Ⅱ</p>
+            <p>
+              <img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              /><img
+                src="/static-dist/libs/img/star-on.png"
+                alt="..."
+              />
+              
+              
+              <span class="item-score">5.0</span>
+              <span class="fr item-num">
+                人数： <span>710</span>
+              </span>
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <a href="/explore/courses?sort=published_time,desc">
+        <button class="btn btn-default more-btn">
+          更多最新课程
+        </button>
+      </a>
+    </div>
+
+    <a class="go-more-button text-center" href="/explore/courses">
+      <div class="button-box">
+        <div class="box-icon">
+          <i class="iconfont iconweibiaoti-1_huaban1fuben4" ></i>
+          <div class="box-text">查看全部课程</div>
+        </div>
+      </div>
+      <div class="button-filter" ></div>
+    </a>
+  </div>
+</section>
+
+      </div>
+  <!-- 推荐教师 -->
+      
+      </div>
+      <div  class="home-item">
+
+  <!-- 展示模块 区域-->
+      
+  <!-- 推荐好课 -->
+      
+  <!-- 热门课程 -->
+      
+  <!-- 最新好课 -->
+      
+  <!-- 推荐教师 -->
+      <div>
+  <section class="bg-fb">
+  <div class="container">
+    <div class="section-tile" id="recommend-teacher">
+      <div class="splice-box">
+        <div class="splice-line"></div>
+        <div class="splice-squ" ></div>
+        <div class="splice-mini-squ" ></div>
+      </div>
+      <span class="title"
+        >推荐教师</span
+      ><div class="splice-box right">
+      <div class="splice-line"></div>
+      <div class="splice-squ" ></div>
+      <div class="splice-mini-squ" ></div>
+    </div>
+    </div>
+
+    <div
+      id="carousel-home-teacher"
+      data-ride="carousel"
+    >
+      
+      <div class="carousel-inner" role="listbox">
+        <!-- <div class="item active" th:if="!${#lists.isEmpty(results)}">
+          <div class="row">
+            <div class="col-md-3" th:each="teacher:${results[0]}">
+              <a class="thumbnail thumbnail-teacher">
+                <div class="img-content">
+                  <img
+                    th:src="${teacher.user} and  ${teacher.user.avatar}  ?  ${teacher.user.avatar}: '/static-dist/images/user-default1.png' "
+                  />
+                  <div class="name ellipsis" th:text="${teacher.name}"></div>
+                </div>
+
+                <div
+                  th:class="!${#strings.isEmpty(teacher.user)}  and !${#strings.isEmpty(teacher.user.userProfile)} ? 'caption' : 'caption empty'"
+                  th:text="  !${#strings.isEmpty(teacher.user)}  and !${#strings.isEmpty(teacher.user.userProfile)} ?   ${teacher.user.userProfile.profile} : '暂无' "
+                ></div>
+              </a>
+            </div>
+          </div>
+        </div> -->
+        
+      </div>
+      
+      
+    </div>
+  </div>
+</section>
+
+      </div>
+      </div>
+</div>
+
+    </div>
+    <div>
+    <!-- <footer class="layout-footer">
+      版权归属：杭州佳学网络科技有限公司
+      <a
+        target="_blank"
+        href="http://beian.miit.gov.cn"
+        th:text="浙ICP备18052447号"
+      ></a>
+      <a
+        target="_blank"
+        href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010802009676"
+        style="
+          display: inline-block;
+          text-decoration: none;
+          height: 20px;
+          line-height: 20px;
+        "
+      >
+        <img
+          th:src="@{/static-dist/images/record.png}"
+          src="/static/static-dist/images/record.png"
+          style="float: left;"
+        />
+        <p
+          style="
+            float: left;
+            height: 20px;
+            line-height: 20px;
+            margin: 0px 0px 0px 5px;
+            color: #939393;
+          "
+        >
+          浙公网安备 33010802009676号
+        </p></a
+      >
+    </footer> -->
+  </div>
+    <div class="footer-wrap">
+      <div class="container">
+        <div class="footer-info">
+          
+          <div class="footer-info-wrap">
+          <div class="footer-info-item">
+            <a href=""  target="_blank">
+            <img
+                    src="http://cdn.jiastudy.cn/static-dist/images/guanwang.png?version=1.3.2"
+            />
+            <span >官网</span>
+            </a>
+            
+          </div>
+          <div class="footer-info-item">
+            <a href=""  target="_blank">
+            <img
+                    src="http://cdn.jiastudy.cn/static-dist/images/guanyuwomen.png?version=1.3.2"
+            />
+            <span >关于我们</span>
+            </a>
+            
+          </div>
+          <div class="footer-info-item">
+            <a href=""  target="_blank">
+            <img
+                    src="http://cdn.jiastudy.cn/static-dist/images/weiguanwang.png?version=1.3.2"
+            />
+            <span >平台介绍</span>
+            </a>
+            
+          </div>
+          <div class="footer-info-item">
+            <a href=""  target="_blank">
+            <img
+                    src="http://cdn.jiastudy.cn/static-dist/images/bangzhuzhongxin.png?version=1.3.2"
+            />
+            <span >帮助中心</span>
+            </a>
+            
+          </div>
+          <div class="footer-info-item">
+            <a href=""  target="_blank">
+            <img
+                    src="http://cdn.jiastudy.cn/static-dist/images/yinsi.png?version=1.3.2"
+            />
+            <span >政策隐私</span>
+            </a>
+            
+          </div>
+          </div>
+        </div>
+        <div class="footer-beian">
+          <span
+          >扬州工业职业技术学院 版权所有</span>
+          <a
+            href="https://beian.miit.gov.cn/#/Integrated/index"
+            target="_blank"
+          >浙ICP备18052447号-1</a>
+          <img
+            src="//cdn.jiastudy.cn/static-dist/images/gongan@2x-ae380fc37cbfd3fdc45ede78ba1adf40.png?version=3.7.0"
+            alt="..."
+          />
+          <a
+            href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010802009676"
+            target="_blank"
+          >浙公网安备 33010802009676号</a>
+          
+        </div>
+        <div class="footer-beian"><a href="http://jiastudy.com/" target="_blank">杭州佳学网络科技有限公司提供技术支持</a></div>
+      </div>
+    </div>
+  </div>
+    <div id="browser-error-tip" style="display: none;">
+      <div id="browser-error-tip-content">
+        <h2>一、您的浏览器不能正确浏览当前网站</h2>
+        <p>
+          您正在使用 Internet Explorer 的早期版本（IE11以下版本
+          或使用该内核的浏览器）。这意味着在升级浏览器前，您将无法访问此网站。
+        </p>
+        <p>
+          如果您正在使用360浏览器、QQ浏览器、搜狗浏览器等，且访问地址是IP不是域名，需手动切换到浏览器的极速模式。如下图：
+        </p>
+        <!-- <img
+          class="change"
+          th:src="@{/static-dist/images/change.jpg}"
+          src="/static/static-dist/images/change.jpg"
+        /> -->
+        <hr />
+        <h2>二、请使用更先进的浏览器</h2>
+        <p>
+          推荐使用以下浏览器的最新版本。如果您的电脑已有以下浏览器的最新版本则直接使用该浏览器访问<b
+            id="referrer"
+          ></b
+          >即可。
+        </p>
+        <p>
+          如果已经使用360浏览器、QQ浏览器、搜狗浏览器等，且访问地址是IP不是域名，需手动切换到浏览器的极速模式。参考（一、您的浏览器不能正确浏览当前网站）中的图片进行切换！
+        </p>
+        <ul class="browser">
+          <li class="chrome">
+            <a
+              target="_blank"
+              href="https://www.google.cn/chrome/browser/desktop/index.html?hl=zh-CN&amp;standalone=1"
+              >谷歌浏览器</a
+            >
+          </li>
+          <li class="firefox">
+            <a target="_blank" href="https://www.mozilla.org/zh-CN/firefox/new/"
+              >火狐浏览器</a
+            >
+          </li>
+          <div class="clean"></div>
+        </ul>
+        <hr />
+        <h2>
+          三、请注意：Windows XP 及 Internet Explorer 早期版本的支持已经结束
+        </h2>
+        <p>
+          自 2016 年 1 月 12 日起，Microsoft 不再为 IE 11
+          以下版本提供相应支持和更新。没有关键的浏览器安全更新，也无法获得更优的体验，请参阅
+          <a
+            target="_blank"
+            href="https://www.microsoft.com/zh-cn/WindowsForBusiness/End-of-IE-support"
+            >微软对 Internet Explorer 早期版本的支持将于 2016 年 1 月 12
+            日结束的说明</a
+          >
+          。 因此需要您使用更先进的浏览器。
+        </p>
+        <hr />
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript">
+    function getBrowserInfo() {
+      var userAgent = navigator.userAgent;
+      var isIE =
+        userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1;
+      var isEdge = userAgent.indexOf("Edge") > -1 && !isIE;
+      var isIE11 =
+        userAgent.indexOf("Trident") > -1 && userAgent.indexOf("rv:11.0") > -1;
+      if (isIE) {
+        var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+        reIE.test(userAgent);
+        var fIEVersion = parseFloat(RegExp["$1"]);
+        return {
+          browser: "ie",
+          ver: fIEVersion,
+        };
+      } else if (isEdge) {
+        return {
+          browser: "edge",
+          ver: "edge",
+        };
+      } else if (isIE11) {
+        return {
+          browser: "ie11",
+          ver: "11",
+        };
+      } else {
+        var Sys = {};
+        var ua = navigator.userAgent.toLowerCase();
+        var re = /(msie|firefox|chrome|opera|version).*?([\d.]+)/;
+        var m = ua.match(re);
+        Sys.browser = m[1].replace(/version/, "'safari");
+        Sys.ver = m[2];
+        return Sys;
+      }
+    }
+    var s = getBrowserInfo();
+    // createDiv();
+    if (s.browser === "ie" && s.ver < 11) {
+      createDiv();
+    }
+    function createDiv(element) {
+      var element = document.getElementById("browser-error-tip");
+      element.className = "browser-error-tip";
+    }
+  </script>
+  <div>
+    <script
+      src="//cdn.jiastudy.cn/static-dist/js/home-cac5a61271acc8adb5cc8dd9e856ae46.js?version=3.7.0"
+    ></script>
+  </div>
+</html>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Tencent/数据/腾讯招聘数据.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tencent/数据/腾讯招聘数据.txt" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/平时练习/train_label.csv" charset="GBK" />
+  </component>
+</project>
