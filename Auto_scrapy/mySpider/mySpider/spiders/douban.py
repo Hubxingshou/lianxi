@@ -36,7 +36,7 @@ class DoubanSpider(scrapy.Spider):
             else:
                 pl_list.append('---暂时爬不下来')
                 print('---哥,没数据啊...该! IP暂时被封了吧  歇会儿试试')
-            sleep(5)
+            sleep(5)  # 这个睡眠时间可以按自己看情况修改
         i=0
         for selector in movie_list:
         #   遍历每个电影列表，从其中精准抓取所需要的信息并保存为item对象
